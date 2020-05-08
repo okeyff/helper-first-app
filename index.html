@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First App Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/dada815726.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="main-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-7 col-sm-7">
+                        <div class="login-left-side ">
+                            <img class="login-img" src="img/relax-girl.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-5">
+                        <div class="login-right-side">
+                            <h1 class="login-title">Log In</h1>
+                            <div>
+                                <i class="fas fa-user" aria-hidden="true"></i>
+                                <input id="login-name" class="login-input" type="text" name="name"
+                                    placeholder="Your Name" required>
+                                <i class="fas fa-lock"></i>
+                                <input id="login-password" class="login-input" type="password" name="password" placeholder="Password" required>
+                            </div>
+                            <div>
+                                <input id="login-remember" class="login-remember" type="checkbox" name="remember">
+                                <label for="login-remember">Remember Me</label>
+                            </div>
+                            <button class="login-btn">Log In</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-sub-menu">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-sm-12">
+                        <div class="sub-menu-content">
+                            <a href="" class="create-acc">Create an account</a>
+                            <div class="social-icons">
+                                Or login with
+                                <a href=""><i class="fab fa-facebook-square"></i></a>
+                                <a href=""><i class="fab fa-twitter-square"></i></a>
+                                <a href=""><i class="fab fa-google-plus-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        require('./render.js');
+    </script>
+</body>
+
+</html>
