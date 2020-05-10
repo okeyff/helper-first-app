@@ -21,6 +21,10 @@
                         <div class="login-left-side ">
                             <img class="login-img" src="img/relax-girl.jpg" alt="">
                         </div>
+                        <div class="incorrent-login">
+                            <p>Incorrect username or password.</p>
+                            <span id="incorrectCloseBtn">X</span>
+                        </div>
                     </div>
                     <div class="col-4 col-sm-5">
                         <div class="login-right-side">
@@ -30,18 +34,20 @@
                                 <input id="login-name" class="login-input" type="text" name="name"
                                     placeholder="Your Name" required>
                                 <i class="fas fa-lock"></i>
-                                <input id="login-password" class="login-input" type="password" name="password" placeholder="Password" required>
+                                <input id="login-password" class="login-input" type="password" name="password"
+                                    placeholder="Password" required>
                             </div>
                             <div>
                                 <input id="login-remember" class="login-remember" type="checkbox" name="remember">
                                 <label for="login-remember">Remember Me</label>
                             </div>
-                            <button class="login-btn">Log In</button>
-                        </div>
+                            <button id="login-btn">Log In</button>
+                                                   </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="login-sub-menu">
             <div class="container">
                 <div class="row">
@@ -68,10 +74,8 @@
 
 
 
-
-    <script>
-        require('./render.js');
-    </script>
+    
+    <script src="./renderer.js"></script>
 </body>
 
 </html>

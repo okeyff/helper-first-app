@@ -62,7 +62,7 @@
     margin: 30px 0px 30px 0px;
 }
 
-.login-btn {
+#login-btn {
     color: #fff;
     background: rgb(62, 138, 185);
     border: none;
@@ -72,14 +72,13 @@
     cursor: pointer;
 }
 
-.login-btn:hover {
+#login-btn:hover {
     background: rgb(26, 111, 163)
 }
 
 .login-sub-menu {
     margin-top: 40px;
 }
-
 .sub-menu-content {
     display: flex;
     justify-content: space-between;
@@ -108,3 +107,28 @@
 .fa-google-plus-square:hover {
     color: #d34836;
 }
+
+.incorrent-login {
+    font-size: 14px;
+    color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 30px;
+    display: none;
+}
+
+.incorrent-login p {
+    margin: 0;
+}
+
+.incorrent-login span:hover {
+    cursor: pointer;
+    color: #000000;;
+}
+
+
+
