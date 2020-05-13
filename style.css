@@ -21,9 +21,11 @@
 }
 
 .login-right-side {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block
+}
+
+.login-create-side {
+    display: none
 }
 
 .login-input {
@@ -42,7 +44,7 @@
     outline: none;
 }
 
-.login-right-side i.fas {
+.login-right-side i.fas, .login-create-side i.fas {
     color: #000;
     width: 26px;
     height: 26px;
@@ -54,12 +56,23 @@
     float: left;
 }
 
-.login-right-side i.fas+input {
+.login-create-side i.fas:first-child, .login-right-side i.fas:first-child {
+    line-height: 30px!important;
+}
+
+.login-right-side i.fas+input, .login-create-side i.fas+input {
     padding-left: 30px;
 }
 
 .login-remember {
-    margin: 30px 0px 30px 0px;
+    margin: 25px 0px 25px 0px;
+}
+
+.login-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 #login-btn {
@@ -68,7 +81,7 @@
     border: none;
     border-radius: 3px;
     padding: 15px 25px;
-    width: 100px;
+    width: 120px;
     cursor: pointer;
 }
 
@@ -76,9 +89,42 @@
     background: rgb(26, 111, 163)
 }
 
-.login-sub-menu {
-    margin-top: 40px;
+#login-create-btn {
+    margin-top: 10px;
+    color: #fff;
+    background: #5fb053;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 25px;
+    width: 100%;
+    cursor: pointer;
 }
+
+#login-create-btn:hover {
+    background: #4a9b3d
+}
+
+#back-to-login {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #000;
+    float: right;
+}
+
+#back-to-login:hover {
+    color: #007bff;
+}
+
+.create-login-fail::-webkit-input-placeholder {
+    color: red;
+}
+
+.login-sub-menu {
+    margin-top: 30px;
+}
+
 .sub-menu-content {
     display: flex;
     justify-content: space-between;
@@ -86,8 +132,19 @@
 }
 
 .create-acc {
+    cursor: pointer;
+    background: transparent;
+    border: none;
     text-decoration: underline;
     color: #000000;
+}
+
+.create-acc:hover {
+    color: #007bff;
+}
+
+.create-acc:focus {
+    outline: none;
 }
 
 .social-icons a {
@@ -117,7 +174,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    margin-top: 30px;
     display: none;
 }
 
@@ -127,8 +183,5 @@
 
 .incorrent-login span:hover {
     cursor: pointer;
-    color: #000000;;
+    color: #000000;
 }
-
-
-

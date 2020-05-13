@@ -13,10 +13,44 @@ document.getElementById('login-btn').addEventListener('click', function () {
         alert('cool!');
         incorrectLogin.style.display = 'none';
     } else {
+        this.style.display = 'none';
         incorrectLogin.style.display = 'flex';
     }
 });
 
-document.getElementById('incorrectCloseBtn').addEventListener('click', function() {
+document.getElementById('incorrectCloseBtn').addEventListener('click', function () {
+    document.getElementById('login-btn').style.display = 'block';
     document.querySelector('.incorrent-login').style.display = 'none';
 });
+
+document.getElementById('login-create-btn').addEventListener('click', function () {
+    let userCreateLogin = document.getElementById('login-create-name'),
+        userCreateEmail = document.getElementById('login-create-email'),
+        userCreatePassword = document.getElementById('login-create-password'),
+        validateLoginMessage = document.querySelectorAll('.login-create-final');
+    if (userCreateLogin.value !== '' && userCreatePassword.value !== '' && userCreateEmail.value !== '') {
+        alert('Account has been created');
+        toLogin();
+    } else {
+        alert('Please fill in all fields')
+        userCreateLogin.classList.add('create-login-fail');
+        userCreateEmail.classList.add('create-login-fail');
+        userCreatePassword.classList.add('create-login-fail');
+    }
+});
+
+document.getElementById('login-forgot').addEventListener('click', function () {
+    alert('Ну, cоболезную!')
+});
+
+
+function toLogin() {
+    document.querySelector('.login-right-side').style.display = 'block';
+    document.querySelector('.login-create-side').style.display = 'none';
+}
+
+function toSignUp() {
+    document.querySelector('.login-right-side').style.display = 'none';
+    document.querySelector('.login-create-side').style.display = 'block';
+}
+

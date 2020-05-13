@@ -21,16 +21,12 @@
                         <div class="login-left-side ">
                             <img class="login-img" src="img/relax-girl.jpg" alt="">
                         </div>
-                        <div class="incorrent-login">
-                            <p>Incorrect username or password.</p>
-                            <span id="incorrectCloseBtn">X</span>
-                        </div>
                     </div>
                     <div class="col-4 col-sm-5">
                         <div class="login-right-side">
                             <h1 class="login-title">Log In</h1>
                             <div>
-                                <i class="fas fa-user" aria-hidden="true"></i>
+                                <i class="fas fa-user-circle"></i>
                                 <input id="login-name" class="login-input" type="text" name="name"
                                     placeholder="Your Name" required>
                                 <i class="fas fa-lock"></i>
@@ -41,8 +37,34 @@
                                 <input id="login-remember" class="login-remember" type="checkbox" name="remember">
                                 <label for="login-remember">Remember Me</label>
                             </div>
-                            <button id="login-btn">Log In</button>
-                                                   </div>
+                            <div class="login-buttons">
+                                <button id="login-btn">Log In</button>
+                                <a id="login-forgot" href="#">Забыли пароль?</a>
+                            </div>
+                            <div class="incorrent-login">
+                                <p>Incorrect username or password.</p>
+                                <span id="incorrectCloseBtn">X</span>
+                            </div>
+                        </div>
+
+                        <div class="login-create-side">
+                            <h1 class="login-title">Sign Up</h1>
+                            <div>
+                                <i class="fas fa-user-circle"></i>
+                                <input id="login-create-name" class="login-input" type="text" name="name"
+                                    placeholder="Enter Your Name" required>
+                                <i class="fas fa-at"></i>
+                                <input id="login-create-email" class="login-input" type="email" name="email"
+                                    placeholder="Enter Your Email" required>
+                                <i class="fas fa-lock"></i>    
+                                <input id="login-create-password" class="login-input" type="password" name="password"
+                                    placeholder="Enter Password" required>
+                                                            </div>
+                            <div class="login-buttons">
+                                <button id="login-create-btn">Sign Up</button>
+                            </div>
+                            <button id="back-to-login" onclick="toLogin()">Already have an account? Sign in</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,7 +75,7 @@
                 <div class="row">
                     <div class=" col-sm-12">
                         <div class="sub-menu-content">
-                            <a href="" class="create-acc">Create an account</a>
+                            <button class="create-acc" onclick="toSignUp()">Create an account</button>
                             <div class="social-icons">
                                 Or login with
                                 <a href=""><i class="fab fa-facebook-square"></i></a>
@@ -74,7 +96,7 @@
 
 
 
-    
+
     <script src="./renderer.js"></script>
 </body>
 
